@@ -13,7 +13,7 @@
         <strong>Message for project owner:</strong><br>
         <textarea name="msg" cols="30" rows="10"></textarea>
     </label>
-    <form action="{{route('bids.store')}}" method='POST'>
+    <form action="{{route('bids.store' , $project->id)}}" method='POST'>
         <button type='submit'> Submit bid</button>
     </form>
     
