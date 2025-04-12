@@ -13,6 +13,10 @@
         <strong>Message for project owner:</strong><br>
         <textarea name="msg" cols="30" rows="10"></textarea>
     </label>
+    <label>
+        <strong>free lancer id:</strong>
+        <input type="text" name='freelancer_id' value={{auth()->user()->id}} disabled>
+    </label>
     <form action="{{route('bids.store' , $project->id)}}" method='POST'>
         <button type='submit'> Submit bid</button>
     </form>

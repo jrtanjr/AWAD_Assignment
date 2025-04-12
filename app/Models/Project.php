@@ -12,23 +12,31 @@ class Project extends Model
         'title',
         'description',
         'budget',
+        'status',
     ];
 
 
 
-    protected $attributes = [
-        'status'=> 'open',
-    ];
+    // protected $attributes = [
+    //     'status'=> 'open',
+    // ];
 
 
 
-    public function owner()
-    {
-        return $this->belongsTo(User::class, 'owner_id');
-    }
+//     public function owner()
+//     {
+//         return $this->belongsTo(User::class, 'owner_id');
+//     }
 
-    public function freelancer()
-    {
-        return $this->belongsTo(User::class, 'freelancer_id');
-    }
+//     public function freelancer()
+//     {
+//         return $this->belongsTo(User::class, 'freelancer_id');
+//     }
+
+public function user() {
+    return $this->belongsTo(User::class, 'owner_id');
+}
+public function bids() {
+    return $this->hasMany(Bid::class);
+}
 }
