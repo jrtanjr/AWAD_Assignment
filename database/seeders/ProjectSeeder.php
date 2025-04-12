@@ -9,11 +9,11 @@ class ProjectSeeder extends Seeder
     public function run()
     {
         Project::create([
-            'owner_id' => 4,
-            'freelancer_id' => 2,
-            'title' => 'AWAD Development Project',
+            'owner_id' => 1,
+            'freelancer_id' => 0,
+            'title' => 'AWAD Development Project 2',
             'description' => 'Build a Laravel-based project management system.',
-            'budget' => 90000,
+            'budget' => 8888,
         ]);
     }
 }
